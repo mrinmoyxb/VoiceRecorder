@@ -17,6 +17,8 @@ class AndroidAudioPlayer(private val context: Context): AudioPlayer {
     }
 
     override fun stop() {
-        TODO("Not yet implemented")
+        player?.stop()
+        player?.release()
+        player = null
     }
 }
